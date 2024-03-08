@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body bgcolor="pink">
+    <form action="Reg" method="post">
+        {% csrf_token %}
+        {{success}}
+    <table align="center" cellpadding = "10"></table>
+    <center>
+        <tr>
+            <td><label>First Name</label></td>
+            <td><input type="text" name="fname" maxlength="50" placeholder="name" />
+            </td>
+        </tr><br>
+        <tr>
+            <td><label>Last Name</label></td>
+            <td><input type="text" name="lname" maxlength="50" placeholder="name" />
+            </td>
+        </tr><br>
+        <tr>
+            <td><label>Gender</label></td>
+            <td>
+            <input type="radio" name="Gender" value="Male" />Male
+            <input type="radio" name="Gender" value="Female" />Female
+            </td>
+        </tr><br>
+        <tr>
+            <td><label>Address</label></td>
+            <td><input type="text" name="Address" maxlength="50" placeholder="Address" />
+            </td>
+        </tr><br>
+        <tr>
+            <td><label>Mobile Number</label></td>
+            <td><input type="number" name="Number" maxlength="50" placeholder="Number" />
+            </td>
+        </tr><br>
+        <tr>
+            <td><label>Pincode</label></td>
+            <td><input type="number" name="pin" maxlength="50" placeholder="pin" />
+            </td>
+        </tr><br>
+
+        <tr>
+            <td><label>Username</label></td>
+            <td><input type="text" name="Username" maxlength="50" placeholder="Username" />
+            </td>
+        </tr><br><br>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="text" name="Password" maxlength="50" placeholder="Password" />
+            </td>
+        </tr><br><br>
+
+        <tr>
+            <td colspan="2" align="center">
+            <input type="submit" value="Register">
+            </td>
+        </tr>
+        
+        </center>
+    </table>
+    </form>
+</body>
+</html>

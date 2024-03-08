@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body bgcolor="blue">
+    <center>
+        <form action="Login" method="Post">
+            {% csrf_token %}
+    <tr>
+        <td><label>Username</label></td>
+        <td><input type="text" name="Username" maxlength="50" placeholder="Username" />
+        </td>
+    </tr><br><br>
+    <tr>
+        <td><label>Password</label></td>
+        <td><input type="text" name="Password" maxlength="50" placeholder="Password" />
+        </td>
+    </tr><br><br>
+    <tr>
+        <td colspan="2" align="center">
+        <input type="Submit" value="Login">
+        </td>
+        </tr>
+        </form>
+    </center>
+    
+</body>
+</html>
